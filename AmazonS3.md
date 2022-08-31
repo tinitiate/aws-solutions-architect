@@ -1,0 +1,77 @@
+#Amazon S3
+
+> by Sri
+> 
+> (c) Syntaxboard 2019
+
+- S3 stores data as objects within **buckets**.
+- An **object** consists of a file and optionally any metadata that describes that file.
+- A **key **is the unique identifier for an object within a bucket.
+- Storage capacity is virtually unlimited.
+
+### **Buckets**
+
+- For each bucket, you can:
+  
+  - Control access to it (create, delete, and list objects in the bucket)
+  - View access logs for it and its objects
+  - Choose the geographical region where to store the bucket and its contents.
+
+- Bucket name 
+  
+  must be a unique DNS-compliant name.
+  
+  - The name must be unique across all existing bucket names in Amazon S3.
+  - After you create the bucket you cannot change the name.
+  - The bucket name is visible in the URL that points to the objects that you’re going to put in your bucket.
+
+- By default, you can create up to 100 buckets in each of your AWS accounts.
+
+- You can’t change its Region after creation.
+
+- You can host static websites by configuring your bucket for website hosting.
+
+- You can’t delete an S3 bucket using the Amazon S3 console if the bucket contains 100,000 or more objects. You can’t delete an S3 bucket using the AWS CLI if versioning is enabled.
+
+### **Data Consistency Model**
+
+- read-after-write consistency for PUTS of new objects in your S3 bucket in all regions
+- strong consistency for read-after-write HEAD or GET requests
+- strong consistency for overwrite PUTS and DELETES in all regions
+- strong read-after-write consistency for any storage request
+- eventual consistency for listing all buckets after deleting a bucket (deleted bucket might still show up)
+- eventual consistency on propagation of enabling versioning on a bucket for the first time.
+
+### **Storage Classes**
+
+|                                        | **S3 Standard**                                                                                                    | **S3 intelligent-Tiering**                                                                                         | **S3 Standard-IA **                                                                           |
+| -------------------------------------- |:------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+| **Durability**                         | 11 9’ s                                                                                                            | 11 9’ s                                                                                                            | 11 9’ s                                                                                       |
+| **Availability**                       | 99.99%                                                                                                             | 99.99%                                                                                                             | 99.99%                                                                                        |
+| **Availability SLA**                   | 99.9%                                                                                                              | 99%                                                                                                                | 99%                                                                                           |
+| **Availability Zones **                | >=3                                                                                                                | >=3                                                                                                                | >=3                                                                                           |
+| **Minimum capacity charge per object** | N/A                                                                                                                | N/A                                                                                                                | 128KB                                                                                         |
+| **Minimum storage duration charge**    | N/A                                                                                                                | 30 days                                                                                                            | 30 days                                                                                       |
+| **Retrieval fee**                      | N/A                                                                                                                | N/A                                                                                                                | per GB retrieved                                                                              |
+| **First byte latency**                 | milliseconds                                                                                                       | milliseconds                                                                                                       | milliseconds                                                                                  |
+| **Use Cases**                          | Cloud applications, dynamic websites, content distribution, mobile and gaming applications and big data analytics. | Data with unknown or changing access  patterns, optimize storage costs automatically, and unpredictable workloads. | ideally suited for long-term file storage, older sync and share storage and other aging data. |
+
+|                                        | *S3 One Zone-IA*                                                                                             | *S3 Glacier Instant Retrieval*                                             | **S3 Glacier Flexible Retrieval**                                          | **S3 Glacier Deep Archive**                                                |
+|:--------------------------------------:|:------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|
+| **Designed for durability**            | 11 9’ s                                                                                                      | 11 9’ s                                                                    | 11 9’ s                                                                    | 11 9’ s                                                                    |
+| **Designed for availability**          | 99.5%                                                                                                        | 99.9%                                                                      | 99.99%                                                                     | 99.99%                                                                     |
+| **Availability SLA**                   | 99%                                                                                                          | 99%                                                                        | 99%                                                                        | 99.9%                                                                      |
+| **Availability Zones **                | 1                                                                                                            | >=3                                                                        | >=3                                                                        | >=3                                                                        |
+| **Minimum capacity charge per object** | 128KB                                                                                                        | 128KB                                                                      | 40KB                                                                       | 40 KB                                                                      |
+| **Minimum storage duration charge**    | 30 days                                                                                                      | 90 days                                                                    | 90 days                                                                    | 180 days                                                                   |
+| **Retrieval fee**                      | per GB retrieved                                                                                             | per GB retrieved                                                           | per GB retrieved                                                           | per GB retrieved                                                           |
+| **First byte latency**                 | milliseconds                                                                                                 | milliseconds                                                               | minutes or hours                                                           | hours                                                                      |
+| **Use Cases**                          | For infrequently - accessed storage, like backups, disaster recovery data or other easily re-creatable data. | Media assets,HealthCare Information archiving , scientific data analytics. | Media assets,HealthCare Information archiving , scientific data analytics. | Media assets,HealthCare Information archiving , scientific data analytics. |
+
+- Lifecycle Management
+  
+  - A *lifecycle configuration* is a set of rules that define actions that is applied to a group of objects.
+    
+    ![](E:\s3\lifecycle-management.jpg)
+  
+  - Transition actions—Define when objects transition to another storage class. For S3-IA and S3-One-Zone, the objects must be stored at least 30 days in the current storage class before you can transition them to another class.
