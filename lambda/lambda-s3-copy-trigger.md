@@ -16,32 +16,32 @@
 
 - 1 Select the Lambda
   
-  ![](./lambda/images/lambda.png)
+  ![](/lambda/images/lambda.png)
   
 - 2 Click on `create function` to create a new function
   
-  ![](./lambda/images/Lambda-01.png)
+  ![](/lambda/images/Lambda-01.png)
   
-  ![](./lambda/images/Lambda-02.png)
+  ![](/lambda/images/Lambda-02.png)
   
-  ![](./lambda/images/Lambda-03.png)
+  ![](/lambda/images/Lambda-03.png)
   
-  ![](./lambda/images/Lambda-04.png)
+  ![](/lambda/images/Lambda-04.png)
   
 
 ### STEP 3: Create Trigger
 
-![](./lambda/images/create-trigger-01.png)
+![](/lambda/images/create-trigger-01.png)
 
-![](./lambda/images/create-trigger-02.png)
+![](/lambda/images/create-trigger-02.png)
 
-![](./lambda/images/create-trigger-03.png)
+![](/lambda/images/create-trigger-03.png)
 
-![](./lambda/images/create-trigger-04.png)
+![](/lambda/images/create-trigger-04.png)
 
-![](./lambda/images/create-trigger-05.png)
+![](/lambda/images/create-trigger-05.png)
 
-![](./lambda/images/create-trigger-06.png)
+![](/lambda/images/create-trigger-06.png)
 
 ```python
 import boto3
