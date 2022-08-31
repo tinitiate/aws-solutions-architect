@@ -72,6 +72,6 @@
   
   - A *lifecycle configuration* is a set of rules that define actions that is applied to a group of objects.
     
-    ![](E:\s3\lifecycle-management.jpg)
+    ![](./images/lifecycle-management.jpg)
   
   - Transition actions—Define when objects transition to another storage class. For S3-IA and S3-One-Zone, the objects must be stored at least 30 days in the current storage class before you can transition them to another class.
