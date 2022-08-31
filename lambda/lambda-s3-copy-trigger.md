@@ -16,30 +16,32 @@
 
 - 1 Select the Lambda
   
-  ![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\lambda.png?msec=1661946289379)
+  ![](./lambda/images/lambda.png)
   
 - 2 Click on `create function` to create a new function
   
-  ![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\Lambda-01.png?msec=1661946433167)
+  ![](./lambda/images/Lambda-01.png)
   
-  ![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\Lambda-02.png?msec=1661946869141)![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\Lambda-03.png?msec=1661946947153)
+  ![](./lambda/images/Lambda-02.png)
   
-  ![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\Lambda-04.png?msec=1661958836825)
+  ![](./lambda/images/Lambda-03.png)
+  
+  ![](./lambda/images/Lambda-04.png)
   
 
 ### STEP 3: Create Trigger
 
-![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\create-trigger-01.png?msec=1661960268230)
+![](./lambda/images/create-trigger-01.png)
 
-![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\create-trigger-02.png?msec=1661960370835)
+![](./lambda/images/create-trigger-02.png)
 
-![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\create-trigger-03.png?msec=1661960555182)
+![](./lambda/images/create-trigger-03.png)
 
-![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\create-trigger-04.png?msec=1661960654799)
+![](./lambda/images/create-trigger-04.png)
 
-![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\create-trigger-05.png?msec=1661960805158)
+![](./lambda/images/create-trigger-05.png)
 
-![](file://E:\Lambda-Creation\lambda-s3-copy-trigger\create-trigger-06.png?msec=1661961051598)
+![](./lambda/images/create-trigger-06.png)
 
 ```python
 import boto3
