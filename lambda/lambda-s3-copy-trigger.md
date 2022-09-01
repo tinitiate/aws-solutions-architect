@@ -8,9 +8,17 @@
 
 ### STEP 1: Create Buckets
 
-*
+- 1 Select the S3
 
-*
+  ![](/lambda/images/s3-01.png)
+
+- 2 Click on `create bucket to create a new bucket
+
+  ![](/lambda/images/s3-02.png)
+  
+  ![](/lambda/images/s3-03.png)
+  
+  ![](/lambda/images/s3-04.png)
 
 ### STEP 2: Create Lambda Function
 
