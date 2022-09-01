@@ -19,6 +19,9 @@
   ![](/lambda/images/s3-03.png)
   
   ![](/lambda/images/s3-04.png)
+  
+ - 3 Follow the same process from above to create the `secondbucket`
+   
 
 ### STEP 2: Create Lambda Function
 
