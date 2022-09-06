@@ -1,4 +1,5 @@
-# Internet Gateways
+# Gateways
+## Internet Gateway
 
 - Allows communication between instances in your VPC and the internet.
 - Imposes no availability risks or bandwidth constraints on your network traffic.
@@ -12,7 +13,7 @@
    
     ![internet gateway](/VPC/images/internet-gateway.png)
 
-## Egress-Only Internet Gateways
+## Egress-Only Internet Gateway
 
 - IPv6 addresses are globally unique, and are therefore public by default. If we want our instance to be able to access the internet, but prevent resources on the       internet from initiating communication with your instance, you can use an egress-only internet gateway..
 - An egress-only Internet gateway is Stateful : it forwards traffic from the instances in the subnet to the internet or other AWS services, and then sends the response back to the instances.
