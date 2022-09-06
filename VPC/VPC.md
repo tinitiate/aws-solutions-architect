@@ -193,32 +193,38 @@
 
 ### Virtual Private Gateway
 
-- VPN concentrate on the AWS side of the VPN connection
+- VPN cocentrator on the Amazon side of the Site-to-Site VPN connection
 - VGW is created and attached to the VPC from which you want to create the Site-to-Site VPN connection
-- Possibility to customize the ASN
+- When we create a virtual private gateway, you can specify the private Autonomous System Number (ASN) for the Amazon side of the gateway.
 
 ### Customer Gateway
 
-- Software application or physical device on the customer side of the VPN connection
+- Software application or physical device on client side of the Site-to-Site VPN connection.
 - IP Address
   - Use static, internet-routable IP address for your customer gateway device
   - if a CGW behind NAT (NAT-T), use the public IP address of the NAT
 
-### Direct Connect
+## Direct Connect
 
-AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Therefore, we can establish private connectivity between AWS and your datacenter, office, or colocation environment, which in many cases can reduce your network costs, increase bandwidth throughput and provide a more consistent network experience than Internet-based connections.
+- AWS Direct Connect enables you to establish a dedicated network connection between your network and one of the AWS Direct Connect locations.
+- There are two types of connections:
+  - Dedicated Connection
+  - Hosted Connection
 
-- Provides a dedicated **private** connection from a remote network to your VPC
-- Dedicated connection must be set up between your DC and AWS Direct Connect locations
-- You need to set up a **Virtual Private Gateway** on your VPC
-- Access public resources (S3) and private (EC2) on the same connection
+### Dedicated Connection: 
+- A physical Ethernet connection associated with a single customer. Customers can request a dedicated connection through the AWS Direct Connect console, the CLI, or the API.
+
+### Hosted Connection: 
+- A physical Ethernet connection that an AWS Direct Connect Partner provisions on behalf of a customer. Customers request a hosted connection by contacting a partner     in the AWS Direct Connect Partner Program, who provisions the connection.
+- Lead times are often longer than 1 month to establish a new connection
+
 - Use cases:
   - Increase bandwidth throughput - working with large datasets, lower cost
   - More consistent network experience - applications using real-time data feeds
   - Hybrid Environments (on-prem + cloud)
-- Supports both IPv4 and IPv6
+  - Supports both IPv4 and IPv6
 
-If you want to set up a Direct Connect to one or more VPC in many different regions (same account), you must use a Direct Connect Gateway
+- If you want to set up a Direct Connect to one or more VPC in many different regions (same account), you must use a Direct Connect Gateway
 
 ### Direct Connect - Connection Types
 
@@ -234,7 +240,7 @@ If you want to set up a Direct Connect to one or more VPC in many different regi
 - Capacity can be added or removed on demand
 - 1,2,5,10 Gbps available at select AWS Direct Connection Partners
 
-Lead times are often longer than 1 month to establish a new connection
+
 
 ##### Direct Connect - Encryption
 
@@ -256,7 +262,8 @@ Lead times are often longer than 1 month to establish a new connection
 
 ##### Transit Gateway
 
-Connects your VPCs and on-premises networks through a central hub. This simplifies your network and puts an end to complex peering relationships. It acts as a cloud router – each new connection is only made once.
+- A transit gateway is a transit hub that you can use to interconnect your virtual private clouds (VPC) and on-premises networks
+- Connects your VPCs and on-premises networks through a central hub. This simplifies your network and puts an end to complex peering relationships. It acts as a cloud router – each new connection is only made once.
 
 - For having **transitive peering between thousands of VPC and on-premises**, hub-and-spoke (star) connection
 - Regional resource, can work cross-region
