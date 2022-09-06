@@ -1,11 +1,12 @@
 # Amazon VPC
 
 - An Amazon VPC is an isolated portion of the AWS cloud. We use Amazon VPC to create a virtual network topology for our Amazon EC2 resources.
+- We have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
+- We can create a public-facing subnet for your webservers that has access to the Internet, and place your backend systems such as databases or application servers in a private-facing subnet with no Internet access.
 
+## VPC Example
 
-We have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
-
-We can create a public-facing subnet for your webservers that has access to the Internet, and place your backend systems such as databases or application servers in a private-facing subnet with no Internet access.
+![AWS-VPC](/VPC/images/AWS-VPC.png)
 
 ## Subnets
 
@@ -18,40 +19,45 @@ We can create a public-facing subnet for your webservers that has access to the 
   - Public Subnet – has an internet gateway
   - Private Subnet – doesn’t have an internet gateway
   - VPN-only Subnet – has a virtual private gateway instead
-- We cannot increase or decrease the size of an existing CIDR block.
+- We cannot increase or decrease the size of an existing CIDR (Classless Inter-Domain Routing) block.
 - The first 4 and last 1 IP addresses in a subnet are reserved.
-- When we associate a CIDR block with your VPC, a route is automatically added to your VPC route tables to enable routing within the VPC (the destination is the CIDR block and the target is *local*).
+- When we associate a CIDR block with our VPC, a route is automatically added to your VPC route tables to enable routing within the VPC (the destination is the CIDR block and the target is *local*).
 
 
-### Subnet Routing
+## Subnet Routing
 - Each subnet must be associated with a **route table**, which specifies the allowed routes for **outbound** **traffic** leaving the subnet.
-- Every subnet that you create is automatically associated with the main route table for the VPC.
-- You can change the association, and you can change the contents of the main route table.
-- You can allow an instance in your VPC to initiate outbound connections to the internet over IPv4 but prevent unsolicited inbound connections from the internet using a **NAT gateway or NAT instance**.
+- Every subnet that we create is automatically associated with the main route table for the VPC.
+- We can change the association, and contents of the main route table.
+- We can allow an instance in your VPC to initiate outbound connections to the internet over IPv4 but prevent unsolicited inbound connections from the internet using a 
+  **NAT gateway or NAT instance**.
 - To initiate outbound-only communication to the internet over IPv6, you can use an egress-only internet gateway.
 
-### VPC Example
 
-![AWS-VPC](/VPC/images/AWS-VPC.png)
 
-### **Subnet Security**
+## **Subnet Security**
+ - AWS provides two features that we can use to increase security in our VPC: 
+   - Security Groups 
+   - Network Access Control Lists
 
-- Security Groups — control inbound and outbound traffic for your instances
-  - You can associate one or more (up to five) security groups to an instance in your VPC.
+### **Security Groups**
+
+  - Security Groups control inbound and outbound traffic for your instances
+  - We can associate one or more (up to five) security groups to an instance in your VPC.
   - If you don’t specify a security group, the instance automatically belongs to the default security group.
   - When you create a security group, it has no inbound rules. By default, it includes an outbound rule that allows all outbound traffic.
   - Security groups are associated with network interfaces.
 
-### Network Access Control Lists
+### **Network Access Control Lists**
 
-- Network Access Control Lists — control inbound and outbound traffic for your subnets
-- Each subnet in your VPC must be associated with a network ACL. If none is associated, automatically associated with the default network ACL.
-  - You can associate a network ACL with multiple subnets; however, a subnet can be associated with only one network ACL at a time.
-  - A network ACL contains a numbered list of rules that is evaluated in order, starting with the lowest numbered rule, to determine whether traffic is allowed in or out of any subnet associated with the network ACL.
+  - Network Access Control Lists — control inbound and outbound traffic for your subnets
+  - Each subnet in our VPC must be associated with a network ACL. 
+  - Every subnet that we create is automatically associated with the default network ACL for the VPC.
+  - We can associate a network ACL with multiple subnets; however, a subnet can be associated with only one network ACL at a time.
+  - A network ACL contains a numbered list of rules that is evaluated in order, starting with the lowest numbered rule, to determine whether traffic is allowed in or       out of any subnet associated with the network ACL.
   - The default network ACL is configured to **allow all traffic to flow in and out** of the subnets to which it is associated.
-  - For custom ACLs, you need to add a rule for ephemeral ports, usually with the range of 32768-65535. If you have a NAT Gateway, ELB or a Lambda function in a VPC, you need to enable 1024-65535 port range.  ​
+  - For custom ACLs, you need to add a rule for ephemeral ports, usually with the range of 32768-65535. If you have a NAT Gateway, ELB or a Lambda function in a VPC,       you need to enable 1024-65535 port range.  ​
 
-| **Security Group**                       | **Network ACL**                          |
+| *Security Group*                         | *Network ACL*                            |
 | ---------------------------------------- | ---------------------------------------- |
 | Operates at the **instance level**       | Operates at the **subnet level**         |
 | Supports **ALLOW rules **only            | Supports **ALLOW rules and DENY rules**  |
@@ -60,13 +66,13 @@ We can create a public-facing subnet for your webservers that has access to the 
 | Applies only to EC2 instances and similar services that use EC2 as a backend. | Automatically **applies to all**         |
 | Security group is specified when launching the instances, or is associated with the instance later on | **Instances in the subnets it’s associated with** |
 
-## Security in  VPC
+- Diagram of security groups and NACLs in a VPC
 
 ![VPC-Security](/VPC/images/VPC-Security.png)
 
   ## **VPC Networking Components**
 
-  - #### Network Interfaces
+  - ### Network Interfaces
 
     - A virtual network interface that can include:
       - a primary private IPv4 address
@@ -80,44 +86,46 @@ We can create a public-facing subnet for your webservers that has access to the 
       - a description
     - Network interfaces can be attached and detached from instances, however, you cannot detach a primary network interface.
 
-  - #### Route Tables
+  - ### Route Tables
 
-    - contains a set of rules, called *routes*, that are used to determine where network traffic is directed.
+    - Contains a set of rules, called *routes*, that are used to determine where network traffic is directed.
     - A subnet can only be associated with one route table at a time, but you can associate multiple subnets with the same route table.
-    - You cannot delete the main route table, but you can replace the main route table with a custom table that you’ve created.
-    - You must update the route table for any subnet that uses gateways or connections.
+    - We cannot delete the main route table, but we can replace the main route table with a custom table that we’ve created.
+    - We must update the route table for any subnet that uses gateways or connections.
     - Uses the most specific route in your route table that matches the traffic to determine how to route the traffic (longest prefix match).
 
-  - #### Internet Gateways
+  - ### Internet Gateways
 
     - Allows communication between instances in your VPC and the internet.
     - Imposes no availability risks or bandwidth constraints on your network traffic.
-    - Provides a target in your VPC route tables for internet-routable traffic, and performs network address translation for instances that have been assigned public IPv4 addresses.
+    - Provides a target in VPC route tables for internet-routable traffic, and performs network address translation for instances that have been assigned public             IPv4 addresses.
     - The following table provides an overview of whether your VPC automatically comes with the components required for internet access over IPv4 or IPv6.
     - To enable access to or from the Internet for instances in a VPC subnet, you must do the following:
       - Attach an Internet Gateway to your VPC
-      - Ensure that your subnet’s route table points to the Internet Gateway.
+      - Add a route to subnet's route table that directs internet-bound traffic to the internet gateway.
       - Ensure that instances in your subnet have a globally unique IP address (public IPv4 address, Elastic IP address, or IPv6 address).
       - Ensure that your network access control and security group rules allow the relevant traffic to flow to and from your instance.
+      ![internet gateway](/VPC/images/internet-gateway.png)
 
-  - #### Egress-Only Internet Gateways
+  - ### Egress-Only Internet Gateways
 
-    - VPC component that allows outbound communication over IPv6 from instances in your VPC to the Internet, and prevents the Internet from initiating an IPv6 connection with your instances.
-    - An egress-only Internet gateway is stateful.
-    - You cannot associate a security group with an egress-only Internet gateway.
-    - You can use a network ACL to control the traffic to and from the subnet for which the egress-only Internet gateway routes traffic.
+    - IPv6 addresses are globally unique, and are therefore public by default. If we want our instance to be able to access the internet, but prevent resources on the       internet from initiating communication with your instance, you can use an egress-only internet gateway..
+    - An egress-only Internet gateway is Stateful : it forwards traffic from the instances in the subnet to the internet or other AWS services, and then sends the           response back to the instances.
+    - We cannot associate a security group with an egress-only Internet gateway.
+    - We can use a network ACL to control the traffic to and from the subnet for which the egress-only Internet gateway routes traffic.
+    ![internet gateway](/VPC/images/egress-only-igw.png)
 
 
-  - #### Elastic IP Addresses
+  - ### Elastic IP Addresses
 
-    - A **static, public IPv4 address**.
-    - You can associate an Elastic IP address with any instance or network interface for any VPC in your account.
-    - You can mask the failure of an instance by rapidly remapping the address to another instance in your VPC.
-    - Your Elastic IP addresses remain associated with your AWS account until you explicitly release them.
-    - AWS imposes a small hourly charge when EIPs aren’t associated with a running instance, or when they are associated with a stopped instance or an unattached network interface.
-    - You’re limited to five Elastic IP addresses.
+    - A **static, public IPv4 address** designed for dynamic cloud computing.
+    - Elastic IP address can be associated with a single instance or network interface at a time.
+    - Elastic IP address can be moved from one instance or network interface to another.
+    - Elastic IP addresses remain associated with our account until you explicitly release them.
+    - Elastic IP addresses for IPv6 are not supported.
 
-  - #### VPC Endpoints
+
+  - ### VPC Endpoints
 
     - Privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
     - Endpoints are virtual devices.
@@ -138,7 +146,7 @@ We can create a public-facing subnet for your webservers that has access to the 
 
   - You can create your own application in your VPC and configure it as an AWS PrivateLink-powered service (referred to as an *endpoint service*). You are the *service provider*, and the AWS principals that create connections to your service are *service consumers*.
 
-##### VPC Flow Logs
+### VPC Flow Logs
 
 - Flow Logs is a feature that enables you to **capture information about the IP traffic going to and from network interfaces in your VPC**. 
 - Flow log data is **stored using Amazon S3 / CloudWatch Logs**. 
@@ -167,7 +175,7 @@ We can create a public-facing subnet for your webservers that has access to the 
 
 - Amazon security groups and network ACLs don’t filter traffic to or from link-local addresses or AWS-reserved IPv4 addresses. Flow logs do not capture IP traffic to or from these addresses.
 
-##### Bastion Hosts
+### Bastion Hosts
 
 - We use a Bastion Host to SSH into our private instances
 
@@ -181,22 +189,22 @@ We can create a public-facing subnet for your webservers that has access to the 
 
   ![BastionHost](/VPC/images/BastionHost.png)
 
-#### Site-to-Site VPN
+## Site-to-Site VPN
 
-##### Virtual Private Gateway
+### Virtual Private Gateway
 
 - VPN concentrate on the AWS side of the VPN connection
 - VGW is created and attached to the VPC from which you want to create the Site-to-Site VPN connection
 - Possibility to customize the ASN
 
-##### Customer Gateway
+### Customer Gateway
 
 - Software application or physical device on the customer side of the VPN connection
 - IP Address
   - Use static, internet-routable IP address for your customer gateway device
   - if a CGW behind NAT (NAT-T), use the public IP address of the NAT
 
-##### Direct Connect
+### Direct Connect
 
 AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Therefore, we can establish private connectivity between AWS and your datacenter, office, or colocation environment, which in many cases can reduce your network costs, increase bandwidth throughput and provide a more consistent network experience than Internet-based connections.
 
@@ -212,9 +220,9 @@ AWS Direct Connect is a cloud service solution that makes it easy to establish a
 
 If you want to set up a Direct Connect to one or more VPC in many different regions (same account), you must use a Direct Connect Gateway
 
-##### Direct Connect - Connection Types
+### Direct Connect - Connection Types
 
-##### Dedicated Connections
+#### Dedicated Connections
 
 - Physical Ethernet port dedicated to a customer
 
