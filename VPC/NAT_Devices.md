@@ -45,6 +45,7 @@ Must manage security groups and rules
 - A NAT gateway can support up to 55,000 simultaneous connections to each unique destination.
 - A NAT gateway cannot send traffic over VPC endpoints, VPN connections, AWS Direct Connect, or VPC peering connections.
 - A NAT gateway uses ports 1024-65535. Make sure to enable these in the inbound rules of your network ACL.
+![NAT-gateway-diagram](/VPC/images/nat-gateway.png)
 
 ### NAT Gateway with High Availability
 
