@@ -9,6 +9,7 @@
   - Add a route to subnet's route table that directs internet-bound traffic to the internet gateway.
   - Ensure that instances in your subnet have a globally unique IP address (public IPv4 address, Elastic IP address, or IPv6 address).
   - Ensure that your network access control and security group rules allow the relevant traffic to flow to and from your instance.
+   
     ![internet gateway](/VPC/images/internet-gateway.png)
 
 ## Egress-Only Internet Gateways
@@ -17,6 +18,7 @@
 - An egress-only Internet gateway is Stateful : it forwards traffic from the instances in the subnet to the internet or other AWS services, and then sends the response back to the instances.
 - We cannot associate a security group with an egress-only Internet gateway.
 - We can use a network ACL to control the traffic to and from the subnet for which the egress-only Internet gateway routes traffic.
+ 
   ![internet gateway](/VPC/images/egress-only-igw.png)
 
 ## Elastic IP Addresses
