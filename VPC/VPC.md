@@ -32,7 +32,7 @@ We can create a public-facing subnet for your webservers that has access to the 
 
 ### VPC Example
 
-![AWS-VPC](E:\AWS\AWS-VPC.png)
+![AWS-VPC](/VPC/images/AWS-VPC.png)
 
 ### **Subnet Security**
 
@@ -62,7 +62,7 @@ We can create a public-facing subnet for your webservers that has access to the 
 
 ## Security in  VPC
 
-![VPC-Security](E:\AWS\\VPC-Security.png)
+![VPC-Security](/VPC/images/VPC-Security.png)
 
   ## **VPC Networking Components**
 
@@ -107,33 +107,6 @@ We can create a public-facing subnet for your webservers that has access to the 
     - You cannot associate a security group with an egress-only Internet gateway.
     - You can use a network ACL to control the traffic to and from the subnet for which the egress-only Internet gateway routes traffic.
 
-    ##### **VPC Peering**
-
-    - A networking connection between two VPCs that enables you to route traffic between them privately. Instances in either VPC can communicate with each other as if they are within the same network.
-
-    - Allows you to connect one VPC with another via a **direct network route** using private IP addresses
-
-    - Instances behave as if they were on the same private network
-
-    - Must not have overlapping CIDR.
-
-      ![overlapping-cidrs-diagram](E:\AWS\overlapping-cidrs-diagram.png)
-
-      ![overlapping-cidrs-ipv6-diagram](E:\AWS\overlapping-cidrs-ipv6-diagram.png)
-
-      ![overlapping-multiple-cidrs-diagram](E:\AWS\overlapping-multiple-cidrs-diagram.png)
-
-    - We can peer VPCs with other AWS accounts as well as with other VPCs in the same account
-
-    - You must update route tables in **each VPC’s subnets** to ensure instances can communicate
-
-    - VPC Peering can work **inter-region, cross-account**
-
-    - You can reference a security group of a peered VPC (works across account)
-
-    - Does not support transitive peering.
-
-      ![transitive-peering-diagram](E:\AWS\transitive-peering-diagram.png)
 
   - #### Elastic IP Addresses
 
@@ -206,7 +179,7 @@ We can create a public-facing subnet for your webservers that has access to the 
 
 - We **cannot** use a NAT Gateway as a Bastion host.
 
-  ![BastionHost](E:\AWS\BastionHost.png)
+  ![BastionHost](/VPC/images/BastionHost.png)
 
 #### Site-to-Site VPN
 
@@ -294,7 +267,7 @@ Another use case for Transit Gateway is to increase the bandwith of your site-to
 You can share your direct connect connection between multiple accounts using Transit Gateway.
 
 requires a network load balancer (Service VPC) and ENI (Customer VPC)
-#### ![aws-privatelink](E:\AWS\aws-privatelink.png)
+#### ![aws-privatelink](/VPC/images/aws-privatelink.png)
 
 | Service                             | Description                              |
 | ----------------------------------- | ---------------------------------------- |
