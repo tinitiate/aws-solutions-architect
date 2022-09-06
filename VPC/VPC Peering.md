@@ -10,15 +10,14 @@
 
 - **Must not have overlapping CIDR**.
 
-  ![overlapping-cidrs-diagram](E:\AWS\overlapping-cidrs-diagram.png)
-
-  ​
-
-  ![overlapping-cidrs-ipv6-diagram](E:\AWS\overlapping-cidrs-ipv6-diagram.png)
+  ![overlapping-cidrs-diagram](/VPC/images/overlapping-cidrs-diagram.png)
+  
+  
+  ![overlapping-cidrs-ipv6-diagram](/VPC/images/overlapping-cidrs-ipv6-diagram.png)
 
    			
 
-  ![overlapping-multiple-cidrs-diagram](E:\AWS\overlapping-multiple-cidrs-diagram.png)
+  ![overlapping-multiple-cidrs-diagram](/VPC/images/overlapping-multiple-cidrs-diagram.png)
 
   ​
 
@@ -32,7 +31,7 @@
 
 - Does not support transitive peering.
 
-  ![transitive-peering-diagram](E:\AWS\transitive-peering-diagram.png)
+  ![transitive-peering-diagram](/VPC/images/transitive-peering-diagram.png)
 
 ## Establishing A Peering Connection
 
