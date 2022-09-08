@@ -160,47 +160,6 @@
 
   ![BastionHost](/VPC/images/BastionHost.png)
 
-## Site-to-Site VPN
-
-### Virtual Private Gateway
-
-- VPN cocentrator on the Amazon side of the Site-to-Site VPN connection
-- VGW is created and attached to the VPC from which you want to create the Site-to-Site VPN connection
-- When we create a virtual private gateway, you can specify the private Autonomous System Number (ASN) for the Amazon side of the gateway.
-
-### Customer Gateway
-
-- Software application or physical device on client side of the Site-to-Site VPN connection.
-- IP Address
-  - Use static, internet-routable IP address for your customer gateway device
-  - if a CGW behind NAT (NAT-T), use the public IP address of the NAT.
-  
-### Transit Gateway
-
-- A transit gateway is a transit hub that you can use to interconnect your virtual private clouds (VPC) and on-premises networks
-- Connects your VPCs and on-premises networks through a central hub. This simplifies your network and puts an end to complex peering relationships. It acts as a cloud    router – each new connection is only made once.
-- For having **transitive peering between thousands of VPC and on-premises**, hub-and-spoke (star) connection
-- Regional resource, can work cross-region
-- Share cross-account using Resource Access Manager (RAM)
-- You can peer Transit Gateways across regions
-- Route Tables: limit which VPC can talk with other VPC
-- Works with Direct Connect Gateway, VPN connections
-- **Supports IP Multicast** (not supported by any other AWS service)
-
-Another use case for Transit Gateway is to increase the bandwith of your site-to-site VPN connection using **ECMP**.
-
-- ECMP = Equal-cost multi-path routing
-- Routing strategy to allow to forward a packet over multiple best path
-- Use case: create multiple Site to-Site VPN connections to increase the bandwidth of your connection to AWS
-
-
-![aws-Site-to-Site](/VPC/images/site-basic-diagram.png)
-
-![aws-Site-to-Site](/VPC/images/site-site-transit-gateway-basic.png)
-
-![aws-Site-to-Site](/VPC/images/branch-offices-diagram.png)
-
-![aws-Site-to-Site](/VPC/images/branch-off-transit-gateway.png)
 
 ## Direct Connect
 
