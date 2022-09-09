@@ -177,5 +177,4 @@
 - Requires a network load balancer (Service VPC) and ENI (Customer VPC)
 
 
- ![aws-privatelink](/VPC/images/aws-privatelink.png)
 
