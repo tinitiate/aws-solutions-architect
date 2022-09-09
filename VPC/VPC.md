@@ -164,11 +164,12 @@
 
 #### AWS PrivateLink (VPC Endpoints Services)
 
-- #### Most secure & scalable way o expose a service to 1000s of VPC (own or other accounts)
-
+- Most secure & scalable way o expose a service to 1000s of VPC (own or other accounts)
 - Does not require VPC Peering, Internet Gateway, NAT, Route Tables
 
-##### VPN CloudHub
+  ![aws-privatelink](/VPC/images/aws-privatelink.png)
+
+#### VPN CloudHub
 
 - Provide secure communication between sites, if you have multiple VPN connections
 - Low-cost hub-and-spoke model for primary or secondary network connectivity between locations
@@ -176,5 +177,5 @@
 - Requires a network load balancer (Service VPC) and ENI (Customer VPC)
 
 
-#### ![aws-privatelink](/VPC/images/aws-privatelink.png)
+ ![aws-privatelink](/VPC/images/aws-privatelink.png)
 
