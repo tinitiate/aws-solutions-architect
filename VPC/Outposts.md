@@ -5,7 +5,7 @@
 - An Outpost is a pool of AWS compute and storage capacity deployed at a customer site. AWS operates, monitors, and manages this capacity as part of an AWS Region. 
 - We Can create subnets on our Outpost and specify them when you create AWS resources such as EC2 instances, EBS volumes, ECS clusters, and RDS instances. Instances in Outpost subnets communicate with other instances in the AWS Region using private IP addresses, all within the same VPC
 
-![outpost-networking-components](D:\AWS\ec2\outpost-networking-components.png)
+![outpost-networking-components](/VPC/images/outpost-networking-components.png)
 
 ## Key concepts 
 
@@ -67,7 +67,7 @@
 
   - With AWS RAM, you can share the local gateway route table with other AWS accounts or organizational units.
 
-    ![outpost-networking-components](D:\AWS\ec2\outpost-private-connectivity.png)
+    ![outpost-networking-components](/VPC/images/outpost-private-connectivity.png)
 
 ### Local network interface
 
