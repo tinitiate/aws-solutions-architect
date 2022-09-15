@@ -49,7 +49,7 @@
   - Launch permissions that control which AWS accounts can use the AMI to launch instances.
   - A block device mapping that specifies the volumes to attach to the instance when it’s launched.
 
-    ![ami_lifecycle](D:\AWS\ec2\images\ami_lifecycle.png)
+    ![ami_lifecycle](/ec2/images/ami_lifecycle.png)
 
     |        Characteristic        |                                                                Amazon EBS-backed AMI                                                                |                         Amazon instance store-backed AMI                         |
     | :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
@@ -95,7 +95,7 @@
 | Shutting-Down |                                            The instance is preparing to be terminated.                                            |                           No                           |
 |   Terminated   |                                             The instance has been permanently deleted                                             |                           No                           |
 
-![instance_lifecycle](D:\AWS\ec2\images\instance_lifecycle.png)
+![instance_lifecycle](/ec2/images/instance_lifecycle.png)
 
 ## Root device volumes
 
@@ -279,4 +279,3 @@
   “curl http://169.254.169.254/latest/meta-data/”.
   ```
 
-[^]:
