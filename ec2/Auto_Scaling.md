@@ -10,7 +10,7 @@
 - Horizontal Scaling means adding more resources.
 - For Example adding more instances.
 
-![Scaling](D:\AWS\ec2\Scaling.PNG)
+![Scaling](/ec2/images/Scaling.PNG)
 
 ## AWS Auto Scaling
 
@@ -20,7 +20,7 @@
 -  If we specify the desired capacity, either when you create the group or at any time thereafter, Amazon EC2 Auto Scaling ensures that your group has this many instances. 
 - If we specify scaling policies, then Amazon EC2 Auto Scaling can launch or terminate instances as demand on your application increases or decreases.
 
-![as-basic-diagram](D:\AWS\ec2\as-basic-diagram.png)
+![as-basic-diagram](/ec2/images/as-basic-diagram.png)
 
 ## Auto Scaling components
 
@@ -52,7 +52,7 @@ Amazon EC2 Auto Scaling provides several ways for you to scale your Auto Scaling
 
   
 
-![auto_scaling_lifecycle](D:\AWS\ec2\auto_scaling_lifecycle.png)
+![auto_scaling_lifecycle](/ec2/images/auto_scaling_lifecycle.png)
 
 
 
@@ -83,7 +83,7 @@ Amazon EC2 Auto Scaling provides several ways for you to scale your Auto Scaling
   - When you configure automatic scale in, you must decide which instances should terminate first and set up a **termination policy**. You can also use **instance protection** to prevent specific instances from being terminated during automatic scale in.
   - Default Termination Policy
 
-![TerminationPolicy](D:\AWS\ec2\TerminationPolicy.png)
+![TerminationPolicy](/ec2/images/TerminationPolicy.png)
 
 - **Custom Termination Policies**
   - *OldestInstance* – Terminate the oldest instance in the group.
