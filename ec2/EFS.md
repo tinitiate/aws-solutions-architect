@@ -31,4 +31,4 @@
 - Provisioned Throughput mode
   - You specify the throughput of your file system independent of the amount of data stored.
 
-![EFS](D:\AWS\ec2\EFS.png)
+![EFS](/ec2/images/EFS.png)
