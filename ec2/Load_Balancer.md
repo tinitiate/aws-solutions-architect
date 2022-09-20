@@ -92,6 +92,7 @@
   AZ registered with the load balancer.
 - SupportS TCP and SSL listeners
 - Classic load balancers are always Internet-facing.
+
 ### Monitoring:
 - **CloudWatch metrics** – retrieve statistics about data points for your load balancers and targets as an ordered set of time-series data, known as metrics.
 - **Access logs** – capture detailed information about the requests made to your load balancer and store them as log files in S3.
