@@ -64,11 +64,7 @@ Amazon EC2 Auto Scaling provides several ways for you to scale your Auto Scaling
 
 - The size of your Auto Scaling group is restricted by *capacity limits*, which can be resized between the minimum and maximum size limits.
 
-- The 
-
-  cooldown period
-
-   is a configurable setting that helps ensure to not launch or terminate additional instances before previous scaling activities take effect.
+- The cooldown period is a configurable setting that helps ensure to not launch or terminate additional instances before previous scaling activities take effect.
 
   - EC2 Auto Scaling supports cooldown periods when using simple scaling policies, but not when using target tracking policies, step scaling policies, or scheduled scaling.
 
