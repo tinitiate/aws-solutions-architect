@@ -98,7 +98,7 @@
 - **Access logs** – capture detailed information about the requests made to your load balancer and store them as log files in S3.
 - **Request tracing** – track HTTP requests.
 - **CloudTrail logs** – capture detailed information about the calls made to the Elastic Load Balancing API and store them as log files in S3.
-- 
+ 
 ## Target groups
 - Target groups are a logical grouping of targets and are used with ALB, NLB, and GLB.
 - Targets are the endpoints and can be EC2 instances, ECS containers, IP addresses, Lambda functions, and other load balancers.
