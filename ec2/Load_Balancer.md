@@ -98,3 +98,32 @@
 - **Access logs** – capture detailed information about the requests made to your load balancer and store them as log files in S3.
 - **Request tracing** – track HTTP requests.
 - **CloudTrail logs** – capture detailed information about the calls made to the Elastic Load Balancing API and store them as log files in S3.
+- 
+## Target groups
+- Target groups are a logical grouping of targets and are used with ALB, NLB, and GLB.
+- Targets are the endpoints and can be EC2 instances, ECS containers, IP addresses, Lambda functions, and other load balancers.
+- Target groups can exist independently from the ELB.
+- A single target can be in multiple target groups.
+- Only one protocol and one port can be defined per target group.
+- You cannot use public IP addresses as targets.
+- You cannot use instance IDs and IP address targets within the same target group.
+- A target group can only be associated with one load balancer.
+- Target groups are used for registering instances against an ALB, NLB, or GLB.
+- Target groups are a regional construct (as are ELBs).
+- The following attributes can be defined:
+  - Deregistration delay – the amount of time for Elastic Load Balancing to wait before deregistering a target.
+  - Slow start duration – the time, in seconds, during which the load balancer sends a newly registered target a linearly increasing 
+    share of the traffic to the target group.
+  - Stickiness – indicates whether sticky sessions are enabled.
+- Auto Scaling groups can scale each target group individually.
+- You can only use Auto Scaling with the load balancer if using instance IDs in your target group.
+- Health checks are defined per target group.
+- ALB/NLB/GLB can route to multiple target groups.
+- You can register the same EC2 instance or IP address with the same target group multiple times using different ports (used for routing requests to microservices).
+- If you register by instance ID the traffic is routed using the primary private IP address of the primary network interface.
+- If you register by IP address you can route traffic to an instance using any private address from one or more network interfaces.
+- You cannot mix different types within a target group (EC2, ECS, IP, Lambda function).
+- IP addresses can be used to register:
+  - Instances in a peered VPC.
+  - AWS resources that are addressable by IP address and port.
+  - On-premises resources linked to AWS through Direct Connect or a VPN connection.
