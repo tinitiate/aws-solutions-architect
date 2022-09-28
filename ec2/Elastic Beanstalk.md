@@ -15,7 +15,7 @@
   - Ruby
 - Elastic Beanstalk supports Docker containers.
 
-![Beanstalk](C:\Users\srikanth.athaluri\OneDrive - United Nations\Azure\clearbox-flow-00.png)
+![Beanstalk](/ec2/images/clearbox-flow-00.png)
 
 ## **Concepts**
 
