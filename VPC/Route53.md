@@ -8,7 +8,7 @@
   - DNS resolution.
   - Health checking of resources.
 
-![DNS](C:\Users\technical\Desktop\Aws\DNS.png)
+![DNS](/VPC/images/DNS.png)
 
 ## Key Points
 
@@ -75,11 +75,11 @@
 
 ## Traffic Route 
 
-![route-53-route](C:\Users\technical\Desktop\Aws\route-53-route.png)
+![route-53-route](/VPC/images/route-53-route.png)
 
 ## Health Checks
 
-![HealthCheck](C:\Users\technical\Desktop\Aws\HealthCheck.png)
+![HealthCheck](/VPC/images/HealthCheck.png)
 
 ## Routing Policies
 
