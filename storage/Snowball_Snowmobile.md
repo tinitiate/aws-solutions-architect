@@ -12,7 +12,7 @@
 - **Import To S3** – transfer of 80 TB or less of your local data copied onto a single device, and then moved into S3.
   - Snowball Edge devices and jobs have a one-to-one relationship. Each job has exactly one device associated with it. If you need to import more data, you can create new import jobs or clone existing ones.
 - **Export From S3** – transfer of any amount of data located in S3, copied onto any number of Snowball Edge devices, and then move one Snowball Edge device at a time into your on-premises data destination.
-  - When you create an export job, it’s split into job parts. Each job part is no more than 100 TB in size, and each job part has exactly one Snowball Edge device associated with it.
+  - When you create an export job, it’s split into job parts. Each job part is no more than 100 TB in size, and each job part has exactly one Snowball Edge device    associated with it.
 - **Local Compute and Storage Only** – these jobs involve one Snowball Edge device, or multiple devices used in a cluster. This job type is only for local use.
   - A **cluster job** is for those workloads that require increased data durability and storage capacity. Clusters have anywhere from 5 to 10 Snowball Edge devices, called **nodes**.
   - A cluster offers increased durability and increased storage  over a standalone Snowball Edge for local storage and compute.
@@ -22,14 +22,14 @@
 - Files should be in a static state while being written to the device.
 - The *Job created* status is the only status in which you can cancel a job. When a job changes to a different status, it can’t be canceled.
 - All files transferred to a Snowball be no smaller than 1 MB in size.
-- Perform multiple write operations at one time by running each command from multiple terminal windows on a computer with a network connection to a single Snowball Edge device.
+- Perform multiple write operations at one time by running each command from multiple terminal windows on a computer with a network connection to a single Snowball       Edge device.
 - Transfer small files in batches.
 
 ## **Security**
 
 - All data transferred to a device is protected by SSL encryption over the network.
 - To protect data at rest, Snowball Edge uses server side-encryption.
-- Access to Snowball Edge requires credentials that AWS can use to authenticate your requests. Those credentials must have permissions to access AWS resources, such an Amazon S3 bucket or an AWS Lambda function.
+- Access to Snowball Edge requires credentials that AWS can use to authenticate your requests. Those credentials must have permissions to access AWS resources, such an   Amazon S3 bucket or an AWS Lambda function.
 
 # SnowMobile
 
@@ -39,7 +39,10 @@
   - GPS tracking, alarm monitoring
   - 24/7 video surveillance
   - an optional escort security vehicle while in transit
-  - All data is encrypted with 256-bit encryption keys you manage through the AWS Key Management Service and designed for security and full chain-of-custody of your data.
-- Snowmobile pricing is based on the amount of data stored on the truck per month.
+  - All data is encrypted with 256-bit encryption keys you manage through the AWS Key Management Service and designed for security and full chain-of-custody of your       data.
+  - Snowmobile pricing is based on the amount of data stored on the truck per month.
 
-
+## Snowball vs Snowmobile
+- To migrate large datasets of 10PB or more in a single location, you should use Snowmobile. For datasets less than 10PB or distributed in multiple locations, you should use Snowball.
+- If you have a high speed backbone with hundreds of Gb/s of spare throughput, then you can use Snowmobile to migrate the large datasets all at once. If you have limited bandwidth on your backbone, you should consider using multiple Snowballs to migrate the data incrementally.
+- Snowmobile does not support data export. Use Snowball/Snowball Edge for this cause.
