@@ -75,20 +75,20 @@
 ## Storage
  - Kubernetes' Container Storage Interface (CSI) allows third-party storage providers to develop and deploy plugins that provide 
    alternative storage without altering the core code.
- - Amazon EBS CSI driver.
+ - **Amazon EBS CSI driver**
    - The lifecycle of persistent volumes, such as EBS volumes, is handled by EKS clusters.
    - To make calls to AWS APIs, the EBS CSI plugin requires IAM permissions.
    - Although the Amazon EBS CSI controller can be run on Fargate, volumes cannot be mounted to Fargate pods.
    - You can also manage the EBS CSI driver as an EKS add-on.
- - Amazon EFS CSI driver
+ - **Amazon EFS CSI driver**
    - EKS clusters manage the EFS file system lifecycle.
    - Container images based on Windows are incompatible with the EFS CSI driver.
    - Fargate nodes only support static provisioning.
    - A pod running on Fargate automatically mounts an EFS file system.
- - Amazon FSx for Lustre CSI driver
+ - **Amazon FSx for Lustre CSI driver**
    - EKS clusters can also manage the lifecycles of FSx file systems.
    - Fargate does not support the Lustre CSI driver.
- - Amazon FSx for NetApp ONTAP CSI driver.
+ - **Amazon FSx for NetApp ONTAP CSI driver**
    - A storage service to fully managed ONTAP file systems in the cloud.
 
 
