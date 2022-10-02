@@ -37,7 +37,7 @@
 - Cached volumes can range from 1 GiB to 32 TiB in size and must be rounded to the nearest GiB. 
 - Each gateway configured for cached volumes can support up to 32 volumes.
 
-![cachedvolume](/storage/images/CachedVolume.png)
+![CachedVolume](/storage/images/CachedVolume.png)
 
 ### Stored volumes 
 - Used when low-latency access to your entire dataset, first configure your on-premises gateway to store all your data locally. 
@@ -45,7 +45,7 @@
 - Stored volumes can range from 1 GiB to 16 TiB in size and must be rounded to the nearest GiB. 
 - Each gateway configured for stored volumes can support up to 32 volumes.
 
-![storedvolumegateway](/storage/images/StoredVolumesgateway.png)
+![storedvolumesgateway](/storage/images/StoredVolumesgateway.png)
 
 ## Tape Gateway 
 - Archive backup data in Amazon Glacier.
