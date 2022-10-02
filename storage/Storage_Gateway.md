@@ -24,17 +24,28 @@
 - You can manage your S3 data using lifecycle policies, cross-region replication, and versioning.
 - File Gateway now supports Amazon S3 Object Lock, enabling write-once-read-many (WORM) file-based systems to store and access objects in Amazon S3.
 - File Gateway local cache can support up to 64TB of data.
+
+![filegateway](/storage/images/FileGateway.png)
+
 ## Volume Gateway  
 - Provides cloud-backed storage volumes that you can mount as iSCSI devices from your on-premises application servers.
+
+![volumegateway](/storage/images/VolumeGateway.png)
+
 ### Cached volumes 
 - You store your data in S3 and retain a copy of frequently accessed data subsets locally.
 - Cached volumes can range from 1 GiB to 32 TiB in size and must be rounded to the nearest GiB. 
 - Each gateway configured for cached volumes can support up to 32 volumes.
+
+![cachedvolume](/storage/images/CachedVolume.png)
+
 ### Stored volumes 
 - Used when low-latency access to your entire dataset, first configure your on-premises gateway to store all your data locally. 
 - Then asynchronously back up point-in-time snapshots of this data to S3. 
 - Stored volumes can range from 1 GiB to 16 TiB in size and must be rounded to the nearest GiB. 
 - Each gateway configured for stored volumes can support up to 32 volumes.
+
+![storedvolumegateway](/storage/images/StoredVolumesgateway.png)
 
 ## Tape Gateway 
 - Archive backup data in Amazon Glacier.
@@ -43,3 +54,5 @@
 - The AWS Storage Gateway service integrates Tape Gateway with Amazon S3 Glacier Deep Archive storage class, allowing you to store virtual tapes in the lowest-cost Amazon S3 storage class.
 - Tape Gateway also has the capability to move your virtual tapes archived in Amazon S3 Glacier to Amazon S3 Glacier Deep Archive storage class, enabling you to further reduce the monthly cost to store long-term data in the cloud by up to 75%.
 Supports Write-Once-Read-Many and Tape Retention Lock on virtual tapes
+
+![tapegateway](/storage/images/TapeGateway.png)
