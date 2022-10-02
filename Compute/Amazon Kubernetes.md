@@ -33,6 +33,63 @@
  - Nodes must be in the same VPC as the subnets when creating a cluster.
  - Nodes represent the compute resources provisioned for cluster.
  - Taints and tolerations prevent pods from being scheduled on the wrong nodes.
+### Self-managed nodes
+ - Cluster can have several node groups.
+ - Node groups are collections of Amazon EC2 instances deployed in Amazon EC2 Auto Scaling groups.
+ - Node group instances must have the following :
+   - Same instance type
+   - Same AMI
+   - Same EKS node IAM role
+ - Node groups with different instance types and host operating systems can exist in a cluster.
+ - In a cluster, self-managed node groups can be updated using two methods:
+   - Migrating to a new node group
+   - Updating an existing self-managed node group
+### Managed node groups
+ - Automates the provisioning and lifecycle management of nodes in EKS clusters.
+ - Every managed node is provisioned as part of Amazon EC2 Auto Scaling group.
+ - When nodes are launched as part of a managed node group, they are automatically tagged for auto-discovery by Kubernetes Cluster Autoscaler.
+ - Use node group to apply Kubernetes labels to nodes.
+ - Multiple managed node groups can exist in a single cluster.
+ - When you create a managed node group, you have the option of selecting On-Demand or Spot instances.
+ - To ensure that your applications remain available, node updates and terminations drain nodes automatically.
+### AWS Fargate
+ - You must first define a Fargate profile before scheduling pods on Fargate in your cluster.
+ - If a pod matches more than one Fargate profile, Amazon EKS picks one at random.
+ - Fargate profiles are immutable and contains the following components:
+   - Pod execution role
+   - Subnets
+   - Selectors
+   - Namespace
+   - Labels
+- Fargate runs only one pod per node.
+- Pod storage is ephemeral, and data is encrypted with AWS Fargate managed keys.
+- To encrypt ephemeral pod storage, you can use AWS Fargate managed keys.
+## Workloads
+ - Workloads are deployed in containers and defines the applications that run on a Kubernetes cluster.
+ - A pod can contain one or more containers.
+ - Vertical Pod Autoscaler adjusts your pods’ CPU and memory reservations.
+ - Horizontal Pod Autoscaler adjusts the number of pods in a deployment, replication controller, or replica set based on CPU utilization.
+## EKS Connector
+ - Enables you to register and connect any Kubernetes cluster to AWS.
+ - You can view the status, configuration, and workloads of the cluster in the Amazon EKS console after it has been connected.
+## Storage
+ - Kubernetes' Container Storage Interface (CSI) allows third-party storage providers to develop and deploy plugins that provide 
+   alternative storage without altering the core code.
+ - Amazon EBS CSI driver.
+   - The lifecycle of persistent volumes, such as EBS volumes, is handled by EKS clusters.
+   - To make calls to AWS APIs, the EBS CSI plugin requires IAM permissions.
+   - Although the Amazon EBS CSI controller can be run on Fargate, volumes cannot be mounted to Fargate pods.
+   - You can also manage the EBS CSI driver as an EKS add-on.
+ - Amazon EFS CSI driver
+   - EKS clusters manage the EFS file system lifecycle.
+   - Container images based on Windows are incompatible with the EFS CSI driver.
+   - Fargate nodes only support static provisioning.
+   - A pod running on Fargate automatically mounts an EFS file system.
+ - Amazon FSx for Lustre CSI driver
+   - EKS clusters can also manage the lifecycles of FSx file systems.
+   - Fargate does not support the Lustre CSI driver.
+ - Amazon FSx for NetApp ONTAP CSI driver.
+   - A storage service to fully managed ONTAP file systems in the cloud.
 
 
 
