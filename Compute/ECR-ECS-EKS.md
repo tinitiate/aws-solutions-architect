@@ -131,11 +131,3 @@ There are two launch types, and the table below describes some of the difference
   - Bind mounts
 - Private repositories are only supported by the EC2 Launch Type.
 
-# Amazon EKS
-
-- The Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service for running Kubernetes on AWS and on-premises.
-- Amazon EKS can run on Amazon EC2 or AWS Fargate.
-- Integrates with Application Load Balancers, AWS IAM for RBA and Amazon VPC.
-- Amazon EKS provides a scalable and highly available Kubernetes control plane running across multiple AWS Availability Zones (AZs).
-- Amazon EKS automatically manages availability and scalability of Kubernetes API servers and etcd persistence layer.
-- Amazon EKS runs the Kubernetes control plane across three AZs to ensure high availability, and automatically detects and replaces unhealthy control plane nodes.
