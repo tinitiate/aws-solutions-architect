@@ -1,4 +1,4 @@
-# Amazon EKS
+# Amazon Elastic Kubernetes Service
 
 - The Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service for running Kubernetes on AWS and on-premises.
 - Amazon EKS can run on Amazon EC2 or AWS Fargate.
