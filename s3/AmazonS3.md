@@ -1,8 +1,6 @@
 # Amazon S3
 
-> by Sri
-> 
-> (c) Syntaxboard 2019
+> (c) Tinitiate 2019
 
 - S3 stores data as objects within **buckets**.
 - An **object** consists of a file and optionally any metadata that describes that file.
@@ -72,6 +70,6 @@
   
   - A *lifecycle configuration* is a set of rules that define actions that is applied to a group of objects.
     
-    ![](/s3/images/lifecycle-management.jpg)
+    ![](/storage/images/lifecycle-management.jpg)
   
   - Transition actions—Define when objects transition to another storage class. For S3-IA and S3-One-Zone, the objects must be stored at least 30 days in the current storage class before you can transition them to another class.
