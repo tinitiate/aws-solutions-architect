@@ -12,7 +12,7 @@
 
 - FSx provides data protection through encryption, both in transit and at rest.
 
-  ![FSx](/compute/images/FSx.png)
+  ![FSx](/Compute/images/FSx.png)
 
 ### **Use Cases**
 
