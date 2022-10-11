@@ -46,10 +46,10 @@ Another use case for Transit Gateway is to increase the bandwith of your site-to
 
 
 
-![aws-Site-to-Site](/VPC/images/site-basic-diagram.png)
+![aws-Site-to-Site](/Networking/images/site-basic-diagram.png)
 
-![aws-Site-to-Site](/VPC/images/site-site-transit-gateway-basic.png)
+![aws-Site-to-Site](/Networking/images/site-site-transit-gateway-basic.png)
 
-![aws-Site-to-Site](/VPC/images/branch-offices-diagram.png)
+![aws-Site-to-Site](/Networking/images/branch-offices-diagram.png)
 
-![aws-Site-to-Site](/VPC/images/branch-off-transit-gateway.png)
+![aws-Site-to-Site](/Networking/images/branch-off-transit-gateway.png)
