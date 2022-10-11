@@ -128,7 +128,7 @@
   - AWS resources that are addressable by IP address and port.
   - On-premises resources linked to AWS through Direct Connect or a VPN connection.
   
-![TargetGroups](/ec2/images/targetgroups.PNG)
+![TargetGroups](/Networking/images/targetgroups.png)
 
 | Feature                                                   | Application Load Balancer                                    | Network Load Balancer                                        | Gateway Load Balancer                                        | Classic Load Balance      |
 | --------------------------------------------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ | :----------------------------------------------------------- | ------------------------- |
