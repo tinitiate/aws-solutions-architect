@@ -40,6 +40,9 @@
 - App users can sign in either directly through a user pool, or federate through a third-party identity provider (IdP).
 - After a successful authentication, your web or mobile app will receive user pool tokens from Amazon Cognito.
 - You can use those tokens to retrieve AWS credentials that allow your app to access other AWS services.
+
+ ![scenario-authentication-cup](/AwsSolutionsArchitect/Security & Identity Services/images/scenario-authentication-cup.png)
+ 
 ### Access your server-side resources with a user pool
 - After a successful user pool sign-in, your web or mobile app will receive user pool tokens from Amazon Cognito. 
 - You can use those tokens to control access to your server-side resources. 
