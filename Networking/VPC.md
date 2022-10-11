@@ -6,7 +6,7 @@
 
 ## VPC Example
 
-![AWS-VPC](/VPC/images/AWS-VPC.png)
+![AWS-VPC](/Networking/images/AWS-VPC.png)
 
 ## Subnets
 
@@ -68,7 +68,7 @@
 
 - Diagram of security groups and NACLs in a VPC
 
-![VPC-Security](/VPC/images/VPC-Security.png)
+![VPC-Security](/Networking/images/VPC-Security.png)
 
   ## **VPC Networking Components**
 
@@ -158,7 +158,7 @@
 
 - We **cannot** use a NAT Gateway as a Bastion host.
 
-  ![BastionHost](/VPC/images/BastionHost.png)
+  ![BastionHost](/Networking/images/BastionHost.png)
 
 
 
@@ -167,7 +167,7 @@
 - Most secure & scalable way o expose a service to 1000s of VPC (own or other accounts)
 - Does not require VPC Peering, Internet Gateway, NAT, Route Tables
 
-  ![aws-privatelink](/VPC/images/aws-privatelink.png)
+  ![aws-privatelink](/Networking/images/aws-privatelink.png)
 
 #### VPN CloudHub
 
