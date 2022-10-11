@@ -5,7 +5,7 @@
 - Provides an automatic integration and delivery pipeline with fully managed operations, high performance, scalability, and security.
 - App Runner enables automatic deployments each time a commit is pushed to the code repository or a new container image version is pushed to the image repository.
 
- ![app-deploy-lifecycle](/compute/images/app-deploy-lifecycle.png)
+ ![app-deploy-lifecycle](/Compute/images/app-deploy-lifecycle.png)
 
 ## Key Concepts
 - **App Runner service** – An AWS resource that App Runner uses to deploy and manage application based on its source code repository or container image.
