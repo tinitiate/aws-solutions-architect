@@ -49,7 +49,7 @@
   - Launch permissions that control which AWS accounts can use the AMI to launch instances.
   - A block device mapping that specifies the volumes to attach to the instance when it’s launched.
 
-    ![ami_lifecycle](/compute/images/ami_lifecycle.png)
+    ![ami_lifecycle](/Compute/images/ami_lifecycle.png)
 
     |        Characteristic        |                                                                Amazon EBS-backed AMI                                                                |                         Amazon instance store-backed AMI                         |
     | :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
