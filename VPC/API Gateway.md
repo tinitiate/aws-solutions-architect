@@ -23,3 +23,29 @@
   |Edge-optimized| ✓ | |
   |Regional | ✓ | ✓ |
   |Private | ✓ | |
+## Development 
+
+| Features                         | REST API | HTTP API |
+| :------------------------------- | :------- | :------- |
+| CORS configuration               | ✓        | ✓        |
+| Test Invocations                 | ✓        |          |
+| Caching                          | ✓        |          |
+| User-controlled deployments      | ✓        | ✓        |
+| Automatic deployments            |          | ✓        |
+| Custom gateway responses         |          |          |
+| Request validation               |          |          |
+| Request parameter transformation | ✓        | ✓        |
+| Request body transformation      |          |          |
+
+
+## Integrations
+
+| Feature                                              | REST API                                                     | HTTP API                                                     |
+| :--------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| Public HTTP endpoints                                | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/setup-http-integrations.html) | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-http.html) |
+| AWS services                                         | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html) | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html) |
+| AWS Lambda functions                                 | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-integrations.html) | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html) |
+| Private integrations with Network Load Balancers     | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-private-integration.html) | [✓](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) |
+| Private integrations with Application Load Balancers |                                                              | ✓                                                            |
+| Private integrations with AWS Cloud Map              |                                                              | ✓                                                            |
+| Mock integrations                                    | ✓                                                            |                                                              |
