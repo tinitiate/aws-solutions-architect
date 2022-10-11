@@ -50,4 +50,4 @@
   -  SCPs are similar to IAM permission policies except that they don’t grant any permissions. 
   -  Instead, SCPs are filters that allow only the specified services and actions to be used in affected accounts.
 
-![AccountOu](/SecurityAndIdentityServices/images/AccountOuDiragram)
+![AccountOuDiragram](/SecurityAndIdentityServices/images/AccountOuDiragram.png)
