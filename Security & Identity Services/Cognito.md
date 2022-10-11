@@ -13,7 +13,7 @@
 - Users can sign in to your web or mobile app through Amazon Cognito, or federate through a third-party identity provider (IdP).
 - You can use the aliasing feature to enable your users to sign up or sign in with an email address and a password or a phone number and a password.
 - User pools are each created in one AWS Region, and they store the user profile data only in that region. You can also send user data to a different AWS Region.
-- ** Tokens provided through user pools**:
+- **Tokens provided through user pools**:
   - Access tokens contain scopes and groups and are used to grant access to authorized resources. 
   - Access tokens can be configured to expire in as little as five minutes or as long as 24 hours.
   - Refresh tokens contain the information necessary to obtain a new ID or access token. 
@@ -40,8 +40,7 @@
 - App users can sign in either directly through a user pool, or federate through a third-party identity provider (IdP).
 - After a successful authentication, your web or mobile app will receive user pool tokens from Amazon Cognito.
 - You can use those tokens to retrieve AWS credentials that allow your app to access other AWS services.
-
- ![scenario-authentication-cup](/AwsSolutionsArchitect/Security & Identity Services/images/scenario-authentication-cup.png)
+ ![scenario-authentication-cup](/Security & Identity Services/images/scenario-authentication-cup.png)
  
 ### Access your server-side resources with a user pool
 - After a successful user pool sign-in, your web or mobile app will receive user pool tokens from Amazon Cognito. 
