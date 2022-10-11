@@ -47,7 +47,7 @@
 - After a successful authentication, your web or mobile app will receive user pool tokens from Amazon Cognito.
 - You can use those tokens to retrieve AWS credentials that allow your app to access other AWS services.
   
-    ![scenario-authentication-cup](/SecurityIdentityServices/images/scenario-authentication-cup.png)
+    ![scenario-authentication-cup](/SecurityAndIdentityServices/images/scenario-authentication-cup.png)
 
 ### Access your server-side resources with a user pool
 
@@ -55,16 +55,23 @@
 - You can use those tokens to control access to your server-side resources. 
 - You can also create user pool groups to manage permissions, and to represent different types of users.
 
+  ![scenario-api-gateway](/SecurityAndIdentityServices/images/scenario-api-gateway.png)
+
 ### Access resources with API Gateway and Lambda with a user pool
 
 - You can enable your users to access your API through API Gateway. 
 - API Gateway validates the tokens from a successful user pool authentication, 
   and uses them to grant your users access to resources including Lambda functions, or your own API.
+  
+  ![scenario-standalone](/SecurityAndIdentityServices/images/scenario-standalone.png)
 
 ### Access AWS services with a user pool and an identity pool
 
 - After a successful user pool authentication, your app will receive user pool tokens from Amazon Cognito. 
 - You can exchange them for temporary access to other AWS services with an identity pool. 
+
+  ![scenario-cup-cib](/SecurityAndIdentityServices/images/scenario-cup-cib.png)
+
 
 ### Authenticate with a third party and access AWS services with an identity pool
 
@@ -72,6 +79,10 @@
 - An identity pool requires an IdP token from a user that's authenticated by a third-party identity provider (or nothing if it's an anonymous guest).
 - In exchange, the identity pool grants temporary AWS credentials that you can use to access other AWS services.
 
+  ![scenario-identity-pool](/SecurityAndIdentityServices/images/scenario-identity-pool.png)
+
 ### Access AWS AppSync resources with Amazon Cognito
 
 - You can grant your users access to AWS AppSync resources with tokens from a successful Amazon Cognito authentication (from a user pool or an identity pool).
+
+  ![scenario-appsync](/SecurityAndIdentityServices/images/scenario-appsync.png)
