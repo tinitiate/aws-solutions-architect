@@ -12,7 +12,7 @@
 
 - FSx provides data protection through encryption, both in transit and at rest.
 
-  ![FSx](/ec2/images/FSx.png)
+  ![FSx](/storage/images/FSx.png)
 
 ### **Use Cases**
 
