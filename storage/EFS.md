@@ -31,4 +31,4 @@
 - Provisioned Throughput mode
   - You specify the throughput of your file system independent of the amount of data stored.
 
-![EFS](/ec2/images/EFS.png)
+![EFS](/storage/images/EFS.png)
