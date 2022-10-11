@@ -86,3 +86,10 @@
 - You can grant your users access to AWS AppSync resources with tokens from a successful Amazon Cognito authentication (from a user pool or an identity pool).
 
   ![scenario-appsync](/SecurityAndIdentityServices/images/scenario-appsync.png)
+
+| Cognito User Pools                                | Cognito Identity Pools                                       |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| Handles the IdP interactions for you              | Provides AWS credentials for accessing resources on behalf of users |
+| Provides profiles to manage users                 | Supports rules to map users to different IAM roles           |
+| Provides OpenID Connect and OAuth standard tokens | Free                                                         |
+| Priced per monthly active user                    |                                                              |
