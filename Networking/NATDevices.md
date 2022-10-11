@@ -31,7 +31,7 @@ Must manage security groups and rules
 - Outbound
   - Allow HTTP/HTTPS traffic to the internet
  
-    ![NAT-instance-diagram](/VPC/images/nat-instance.png)
+    ![NAT-instance-diagram](/Networking/images/nat-instance.png)
 
 ## NAT Gateways
 
@@ -46,7 +46,7 @@ Must manage security groups and rules
 - A NAT gateway cannot send traffic over VPC endpoints, VPN connections, AWS Direct Connect, or VPC peering connections.
 - A NAT gateway uses ports 1024-65535. Make sure to enable these in the inbound rules of your network ACL.
   
-  ![NAT-gateway-diagram](/VPC/images/nat-gateway.png)
+  ![NAT-gateway-diagram](/Networking/images/nat-gateway.png)
 
 ### NAT Gateway with High Availability
 
@@ -54,7 +54,7 @@ Must manage security groups and rules
 - However, we must create multiple NAT Gateway in multiple AZ for fault-tolerance
 - There is no cross AZ failover needed because if an AZ goes down it does not need NAT
   
-  ![NAT-Gateway-High-Availability-diagram](/VPC/images/nat-gateway-with-ha.png)
+  ![NAT-Gateway-High-Availability-diagram](/Networking/images/nat-gateway-with-ha.png)
 
 ## Comparison of NAT Instance and NAT Gateway
 
