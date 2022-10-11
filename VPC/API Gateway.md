@@ -18,3 +18,8 @@
 
 ## Endpoint type
 - The endpoint type refers to the endpoint that API Gateway creates for your API.
+  |Endpoint types| REST API |HTTP API|
+  |--------------|----------|--------|
+  |Edge-optimized| ✓ | |
+  |Regional | ✓ | ✓ |
+  |Private | ✓ | |
