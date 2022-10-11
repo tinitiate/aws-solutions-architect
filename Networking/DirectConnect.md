@@ -50,8 +50,8 @@
   - AWS Direct Connect advertises all local and remote AWS Region prefixes where available and includes on-net prefixes from other AWS non-Region points of presence       (PoP) where available; for example, CloudFront and Route 53.
   - If we have multiple AWS Direct Connect connections, you can adjust the load-sharing of inbound traffic by advertising prefixes with similar path attributes.
 
-![aws-privatelink](/VPC/images/direct-connect-overview.png)
+![aws-privatelink](/Networking/images/direct-connect-overview.png)
 
-![aws-privatelink](/VPC/images/dc-high-resiliency.png)
+![aws-privatelink](/Networking/images/dc-high-resiliency.png)
 
-![aws-privatelink](/VPC/images/dc-max-resiliency.png)
+![aws-privatelink](/Networking/images/dc-max-resiliency.png)
