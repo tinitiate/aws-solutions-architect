@@ -20,9 +20,9 @@ def upload_my_file(p_s3_bucket_name, p_s3_folder, p_local_folder_file_to_upload,
     l_s3_file_name = ""
     
     if p_upload_file_name == "N/A":
-        l_s3_file_name = p_s3_folder + "/ " + os.path.basename(p_local_folder_file_to_upload)
+        l_s3_file_name = p_s3_folder + "/" + os.path.basename(p_local_folder_file_to_upload)
     else:
-        l_s3_file_name = p_s3_folder + "/ " + p_upload_file_name
+        l_s3_file_name = p_s3_folder + "/" + p_upload_file_name
     
     try:
         response = s3_client.upload_file(p_local_folder_file_to_upload, p_s3_bucket_name, l_s3_file_name)
