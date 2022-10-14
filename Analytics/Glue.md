@@ -7,7 +7,7 @@
   - ETL engine
   - Flexible scheduler
 
-![HowItWorks-overview](C:\Users\sboard\OneDrive\Desktop\HowItWorks-overview.png)
+![HowItWorks-overview](/Analytics/images/HowItWorks-overview.png)
 
 - You define *jobs* in AWS Glue to accomplish the work that's required to extract, transform, and load (ETL) data from a data source to a data target. 
 - Typically perform the following actions:
