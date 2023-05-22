@@ -1,6 +1,5 @@
 # Lambda S3 to S3 Copy Trigger
 
-> by Sri
 > 
 > (c) Syntaxboard 2019
 
