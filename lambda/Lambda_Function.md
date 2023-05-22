@@ -2,7 +2,7 @@
 
 1. Open the AWS Management Console and navigate to the Lambda service.
 
-  ![](C:\Users\sriat\OneDrive\Desktop\chc\Lambda\lambda\Lambda-1.png)
+![](AwsSolutionsArchitect/images/lambda/Lambda-1.png)
 
   
 
